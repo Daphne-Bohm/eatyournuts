@@ -1,6 +1,6 @@
 # Eat Your Nuts Webshop
 
-It is a little webshop I build with HTML, CSS/SASS, Bootstrap, JavaScript, NodeJS and hbs (Handlebars). Users can add products to the cart.
+It is a little webshop I build with HTML, CSS/SASS, Bootstrap, JavaScript, NodeJS and hbs (Handlebars). Users can add products to the shopping cart.
 
 ## Motivation
 
