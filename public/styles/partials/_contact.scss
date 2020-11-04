@@ -1,0 +1,65 @@
+.contact{
+    width: 80%;
+    margin: 80px auto 100px auto;
+    h1{
+        font-size: 30px;
+    }
+    .contact-text{
+        margin: 50px 0;
+    }
+    .contact-maps-form{
+        .contact-maps{
+            iframe{
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+        .contact-form{
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+}
+
+// MEDIA
+
+@media(min-width: 768px) {
+    .contact{
+        h1{
+            font-size: 35px;
+        }
+    }
+}
+
+
+@media(min-width: 1200px) {
+
+    .contact{
+        width: 60%;
+        margin: 80px auto 100px auto;
+        .contact-text{
+            margin: 50px 0;
+        }
+        .contact-maps-form{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            .contact-maps{
+                width: 60%;
+                margin-left: 50px;
+                iframe{
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+            }
+            .contact-form{
+                width: 40%;
+                .btn{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

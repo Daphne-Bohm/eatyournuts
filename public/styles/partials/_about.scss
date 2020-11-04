@@ -1,0 +1,49 @@
+.about{
+    margin: 80px auto 100px auto;
+    width: 80%;
+    .intro{
+        h1{
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+    }
+    .welovenuts{
+        .container-img-about{
+            width: 100%;
+            img{
+                width: 100%;
+                margin-bottom: 50px;
+            }
+        }
+        h2{
+            font-size: 20px;
+            margin: 50px 0;
+        }
+    }
+}
+
+// MEDIA
+
+@media (min-width: 768px) {
+    .about{
+        .intro{
+            h1{
+                font-size: 35px;
+            }
+        }
+        .welovenuts{
+            h2{
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    .about{
+        width: 60%;
+    }
+
+}

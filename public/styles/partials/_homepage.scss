@@ -1,0 +1,389 @@
+.homepage{
+    width: 100%;
+
+    // BANNER
+    .banner{
+        width: 100%;
+        height: 35vh;
+        background-image: url('/img/banner-small.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        *{
+            z-index: 10;
+            position: relative;
+        }
+        .banner-subtitle{
+            color: $white;
+            font-size: 25px;
+            padding-top: 15vh;
+            padding-left: 10vw;
+        }
+       .banner-titlte{
+            color: $white;
+            font-size: 30px;
+            padding-top: 15px;
+            padding-left: 10vw;
+        }
+        &::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.40;
+            z-index: 0;
+        }
+    }
+
+    // NEW IN STORE
+    .new-in-store{
+        .new-in-store-title{
+            margin: 50px 0;
+            font-size: 25px;
+        }
+        .new-in-store-img{
+            margin-bottom: 50px;
+            img{
+                display: block;
+                margin: auto;
+                width: 200px;
+            }
+        }
+        .new-in-store-text{
+            padding: 0 50px;
+            line-height: 1.8;
+            h5{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+
+    // PARALLAX
+    .parallax{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 100%;
+        height: 30vh;
+        background-image: url('/img/parallax.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 10;
+        position: relative;
+        &::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.40;
+            z-index: 0;
+        }
+    }
+
+    // ITEMS
+    .items{
+        h1{
+            font-size: 25px;
+            margin-bottom: 50px;
+        }
+        .cards{
+            .card{
+                padding: 10px;
+                width: 80%;
+                margin: 20px auto;
+                border: none;
+                position: relative;
+                transition: all 0.5s ease;
+                .card-img-top{
+                    width: 200px;
+                    display: block;
+                    margin: auto;
+                }
+                .card-price{
+                    display: flex;
+                    padding-top: 20px;
+                    justify-content: space-between;
+                    input{
+                        margin-right: 5px;
+                        width: 50px;
+                    }
+                    svg{
+                        cursor: pointer;
+                        path{
+                            pointer-events: none;
+                        }
+                    }
+                }
+                &:hover{
+                    box-shadow: 1px 1px 5px $black;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+// FOR JS
+.added{
+    background-color: $black;
+    opacity: 0;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    top: 30%;
+    right: 35px;
+    border-radius: 50%;
+    animation: fallIntoCart 3s ease-in forwards;
+}
+
+@keyframes fallIntoCart{
+    0%{
+        top: 30%;
+        opacity: 0;
+    }
+    30%{
+        top: 85%;
+        height: 14px;
+        opacity: 1;
+    }
+    40%{
+        top: 70%;
+        height: 19px;
+        opacity: 1;
+    }
+    60%{
+        top: 85%;
+        height: 14px;
+        opacity: 1;
+    }
+    80%{
+        top: 80%;
+        height: 19px;
+        opacity: 1;
+    }
+    100%{
+        top: 85%;
+        height: 14px;
+        opacity: 1;
+    }
+}
+
+
+
+// MEDIA
+@media (min-width: 576px) {
+    .homepage{
+        width: 100%;
+        // PARALLAX
+        .parallax{
+            height: 35vh;
+            background-image: url('/img/parallax.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+        // ITEMS
+        .cards{
+            .card{
+                padding: 10px;
+                width: 75%;
+                margin: 20px auto;
+                .card-img-top{
+                    margin: auto;
+                }
+                .card-text{
+                    width: 60%;
+                    margin: auto;
+                }
+                .card-price{
+                    width: 60%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    // JS
+    .added{
+        right: 25%;
+    }
+}
+
+@media (min-width: 768px) {
+    .homepage{
+        width: 100%;
+    
+        // BANNER
+        .banner{
+            background-image: url('/img/banner.png');
+            .banner-subtitle{
+                font-size: 35px;
+            }
+            .banner-titlte{
+                font-size: 40px;
+            }
+        }
+    
+        // NEW IN STORE
+        .new-in-store{
+            .new-in-store-title{
+                font-size: 30px;
+            }
+            .new-in-store-img{
+                img{
+                    width: 300px;
+                }
+            }
+            .new-in-store-text{
+                h5{
+                    font-size: 25px;
+                }
+            }
+        }
+
+        // ITEMS
+        .items{
+            h1{
+                font-size: 30px;
+            }
+            .cards{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 50px 20px;
+                width: 80%;
+                margin: auto;
+                .card{
+                    padding: 10px;
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    // JS
+    .added{
+        right: 26%;
+    }
+
+    @keyframes fallIntoCart{
+        0%{
+            opacity: 0;
+        }
+        30%{
+            top: 86%;
+            height: 14px;
+            opacity: 1;
+        }
+        40%{
+            top: 70%;
+            height: 19px;
+            opacity: 1;
+        }
+        60%{
+            top: 86%;
+            height: 14px;
+            opacity: 1;
+        }
+        80%{
+            top: 80%;
+            height: 19px;
+            opacity: 1;
+        }
+        100%{
+            top: 86%;
+            height: 14px;
+            opacity: 1;
+        }
+    }
+
+}
+
+@media (min-width: 1120px) {
+    // JS
+    .added{
+        right: 25%;
+    }
+    @keyframes fallIntoCart{
+        0%{
+            top: 30%;
+            opacity: 0;
+        }
+        30%{
+            top: 85%;
+            height: 14px;
+            opacity: 1;
+        }
+        40%{
+            top: 70%;
+            height: 19px;
+            opacity: 1;
+        }
+        60%{
+            top: 85%;
+            height: 14px;
+            opacity: 1;
+        }
+        80%{
+            top: 80%;
+            height: 19px;
+            opacity: 1;
+        }
+        100%{
+            top: 85%;
+            height: 14px;
+            opacity: 1;
+        }
+    }
+}
+
+
+@media (min-width: 1300px) {
+    .homepage{
+        // BANNER
+        .banner{
+            height: 50vh;
+            .banner-subtitle{
+                padding-top: 22vh;
+                padding-left: 13vw;
+            }
+           .banner-titlte{
+                padding-top: 20px;
+                padding-left: 13vw;
+            }
+        }
+        // NEW IN STORE
+        .new-in-store{
+            width: 70%;
+        }
+        // ITEMS
+        .items{
+            .cards{
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+    // JS
+    .added{
+        right: 26%;
+    }
+}
+
+@media (min-width: 1800px) {
+    .added{
+        right: 25%;
+    }
+}

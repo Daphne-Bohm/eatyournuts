@@ -1,0 +1,45 @@
+.shoppingcart{
+    margin: 80px auto 100px auto;
+    h1{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    .container{
+        .row{
+            margin: 50px 0;
+            .product-name{
+                .btn{
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .total-order{
+        .total-price{
+            margin-bottom: 10px;
+        }
+        .btn{
+            width: 85%;
+        }
+    }
+}
+
+// MEDIA
+
+@media(min-width: 576px) {
+    .shoppingcart{
+        .total-order{
+            .btn{
+                width: 200px
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .shoppingcart{
+        h1{
+            font-size: 35px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "eat-your-nuts",
+  "version": "1.0.0",
+  "description": "webshop for portfolio",
+  "main": "script.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Daphne",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.4"
+  }
+}
